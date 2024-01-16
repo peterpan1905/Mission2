@@ -10,24 +10,24 @@ number of rolls, pass that number to a second class that has a method that simul
 the dice for the number of times that the user specified. That method in the second class should
 return the array containing the results. In the first class, use that array to print a histogram (using
 the * character) that shows the total percentage each number was rolled. Each * will represent
-1% of the total rolls.
-Sample session:
-Welcome to the dice throwing simulator!
-How many dice rolls would you like to simulate? 1000
-DICE ROLLING SIMULATION RESULTS
-Each "*" represents 1% of the total number of rolls.
-Total number of rolls = 1000.
-2: ***
-3: ***
-4: ***********
-5: ***********
-6: ********
-7: ******************
-8: ****************
-9: **********
-10: *************
-11: *****
-12: **
-Thank you for using the dice throwing simulator. Goodbye!
+1% of the total rolls.<br>
+Sample session:<br>
+Welcome to the dice throwing simulator!<br><br>
+How many dice rolls would you like to simulate? 1000<br><br>
+DICE ROLLING SIMULATION RESULTS<br>
+Each "*" represents 1% of the total number of rolls.<br>
+Total number of rolls = 1000.<br>
+2: ***<br>
+3: ***<br>
+4: ***********<br>
+5: ***********<br>
+6: ********<br>
+7: ******************<br>
+8: ****************<br>
+9: **********<br>
+10: *************<br>
+11: *****<br>
+12: **<br><br>
+Thank you for using the dice throwing simulator. Goodbye!<br><br>
 NOTE: Due to rounding issues and the fact that you cannot print a partial asterisk, your total
 number of asterisks printed may not be exactly 100.
