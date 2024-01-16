@@ -8,13 +8,15 @@ namespace Mission2
 {
     internal class Dice
     {
-        public void Roll(int rolls)
+        public string[] Roll(int rolls)
         {
             // Instance of the Random class to be used when rolling the dice
             Random random = new Random();
 
             // Array to hold 11 values (2-12)
             int[] results = new int[11];
+            // An array to hold a string of asterisks equal to the percentage each number was rolled
+            string[] asterisks = new string[11];
 
             // Roll two die as many times as the user input. Generate random numbers. Add those numbers and save the result to the results array
             for (int i =0; i < rolls; i++)
@@ -28,13 +30,9 @@ namespace Mission2
                 results[sum - 2]++;
             }
 
-            System.Console.WriteLine($"\nDICE ROLLING SIMULATION RESULTS\nEach \"*\" represents 1% of the total number of rolls.\nTotal number of rolls = {rolls}\n");
             // Calculate the percentage that each number was rolled and output that to the console
             for (int i = 0; i < results.Length; i++)
             {
-                // An array to hold a string of asterisks equal to the percentage each number was rolled
-                string[] asterisks = new string[11];
-
                 // Calculate percentage of rolls each number had
                 float percentage = (float)results[i] / rolls * 100;
                 int roundedPercentage = (int)System.Math.Round(percentage, 0);
@@ -44,9 +42,9 @@ namespace Mission2
                 {
                     asterisks[i] = asterisks[i] + "*";
                 }
-                System.Console.WriteLine($"{i + 2}: {asterisks[i]}");
             }
-            System.Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
+            // Returns the array of asterisks
+            return asterisks;
         }
     }
 }
