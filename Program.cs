@@ -16,6 +16,17 @@ internal class Program
         // Convert user input number to integer
         intRolls = int.Parse(strRolls);
 
-        dice.Roll(intRolls);
+        // Collect an array of asterisks to be printed as the results
+        string[] output = dice.Roll(intRolls);
+
+        // Explain the output to the user
+        System.Console.WriteLine($"\nDICE ROLLING SIMULATION RESULTS\nEach \"*\" represents 1% of the total number of rolls.\nTotal number of rolls = {intRolls}\n");
+        // Loop through the output array to print the corresponding asterisks
+        for (int i = 0; i < output.Length; i++)
+        {
+            System.Console.WriteLine($"{i + 2}: {output[i]}");
+        }
+        // Thank the user for using the program
+        System.Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
     }
 }
